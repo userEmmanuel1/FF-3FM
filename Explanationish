@@ -1,0 +1,93 @@
+OLS Regression Results:
+
+Dep. Variable:            y
+R-squared:                0.299
+Model:                    OLS
+Adj. R-squared:           0.276
+Method:                   Least Squares
+F-statistic:              12.96
+Date:                     Mon, 22 Jan 2024
+Prob (F-statistic):       4.02e-07
+Time:                     14:19:51
+Log-Likelihood:           134.54
+No. Observations:         95
+AIC:                      -261.1
+Df Residuals:             91
+BIC:                      -250.9
+Df Model:                  3
+Covariance Type:          nonrobust
+
+Coefficients:
+------------------------------
+                 Coef    Std Err    t      P>|t|    [0.025    0.975]
+------------------------------
+const            0.0090   0.007      1.373    0.173   -0.004    0.022
+Mkt-RF           1.1365   0.189      6.009    0.000    0.761    1.512
+SMB             -0.5226   0.302     -1.728    0.087   -1.123    0.078
+HML             -0.6919   0.287     -2.411    0.018   -1.262   -0.122
+------------------------------
+
+Model Diagnostics:
+------------------------------
+Omnibus:                  5.828
+Prob(Omnibus):            0.054
+Durbin-Watson:            1.681
+Jarque-Bera (JB):         6.665 (Prob(JB): 0.0357)
+Skew:                    -0.311
+Kurtosis:                 4.139
+Cond. No.:               51.9
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Expected yearly return: 0.05359516994645857
+
+
+
+
+
+
+
+
+EXPLANATION
+
+French Fama 3 Factor model used
+—-----------------------------------------------------------------------------------------
+Rit−Rft =αi +βMkti (RMt−Rft)+βSMBi RSMBt +βHMLiRHMLt+εit
+​
+—------------------------------------------------------------------------------------------
+
+Rit−Rft  -  R(it) also known as the excess return of “I” stock minus R(ft), the risk free rate, no financial lost investment 
+
+αi  : Alpha of stock ”I”, the solution should every variable be zero/unaccounted for
+
+*βMkti :  Beta of sensitivity of excess return of asset “I” in comparison of excess market return.
+Key(βMkti >1, then asset “I” is more volatile than the overall market
+        βMkti  =1, then asset “I” moves the same as the market
+       βMkti  <1, then asset “I” is less volatile than the market)	 
+
+ (RMt−Rft) : Numerical value of the excess return, Rmt of the total market while Rft of the risk free rate
+
+βSMBi   Beta of size prem. Small minus big, representing sensitivity of excess returns in correlation of the size prem(how big/small asset “I” is)
+
+RSMBt  Small Minus Big, numerical value of excess returns on small cap asset “I” minus big cap asset “I”
+ 		     
+βHMLi  ; Similar to Beta of SMB, measures the sensitivity of asset “I” in correlation to its value(book to market)
+
+
+RHMLt  ; Value Premium, High (book to market value) Minus Low (book to market ratio),  
+Key(Higher book to market -  Potentially undervalue asset “I”
+       Lower book to market  - Potentially overvaluing asset “I”)
+
+
+εit  - Error, capturing unobserved data influencing asset “I”
+
+
+
+*β  = BETA; Number/variable used to describe the volatility/vulnerability of asset “I” in correlation to a benchmark/market  \
+
+
+
+
+
+
+MORE EXPLANATIONS COMING SOON!!!!!
